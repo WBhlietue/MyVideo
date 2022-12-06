@@ -502,7 +502,7 @@ function GetVideo(num, targetId) {
       "     </div>" +
       '     <div class="details">' +
       '       <div class="author">' +
-      '         <img src="../images/3135715.png" alt="" />' +
+      '         <img src="./images/3135715.png" alt="" />' +
       "       </div>" +
       '       <div class="title">' +
       "         <h3>" +
