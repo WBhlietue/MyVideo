@@ -4,7 +4,7 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   signOut,
-} from "../node_modules/firebase/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 import {
   child,
@@ -12,7 +12,7 @@ import {
   getDatabase,
   ref,
   set,
-} from "../node_modules/firebase/firebase-database.js";
+} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
 
 import { Init, UploadPic, UploadVid } from "./video.js";
 

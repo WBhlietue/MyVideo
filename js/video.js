@@ -4,7 +4,7 @@ import {
   ref,
   uploadBytes,
   getDownloadURL,
-} from "../node_modules/firebase/firebase-storage.js";
+} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js";
 import { SetPicPath, SetVidPath } from "./main.js";
 
 var storage;
