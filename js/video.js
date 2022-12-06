@@ -23,15 +23,15 @@ export function UploadPic(url, num) {
   // fetch(url)
   //   .then((response) => response.blob())
   //   .then((blob) => {
-      uploadBytes(storafeRef, url, picMeta).then((scap) => {
-        console.log(scap);
-        getDownloadURL(ref(storage, "Pictures/" + num + ".jpg"), picMeta).then(
-          (url) => {
-            SetPicPath(url);
-          }
-        );
-      });
-    // });
+  uploadBytes(storafeRef, url, picMeta).then((scap) => {
+    console.log(scap);
+    getDownloadURL(ref(storage, "Pictures/" + num + ".jpg"), picMeta).then(
+      (url) => {
+        SetPicPath(url);
+      }
+    );
+  });
+  // });
   return "";
 }
 

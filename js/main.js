@@ -535,7 +535,7 @@ document.getElementById("adComment").addEventListener("click", () => {
   if (canComment) {
     var txt =
       userData.userName + ":" + document.getElementById("yourComment").value;
-      document.getElementById("yourComment").value = "";
+    document.getElementById("yourComment").value = "";
     var d = document.getElementById("cmt").innerHTML + "<br>" + txt;
     set(ref(databse, "comment/" + urlpar.get("video")), d);
     document.getElementById("cmt").innerHTML = d;
