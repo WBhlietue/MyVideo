@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>myVideo</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo left">
+        <a id="headLogo" href="index.html">
+          <img src="../images/Logo.png" width="120px" height="40px" />
+        </a>
+      </div>
+
+      <div class="search center">
+        <form action="">
+          <input type="text" placeholder="Search" />
+          <button><i class="material-icons">search</i></button>
+        </form>
+      </div>
+      <div>
+        <ul class="searchNav">
+          <li>
+            <a class="#" id="ref">
+              <i class="material-icons">refresh</i>
+            </a>
+          </li>
+          <li>
+            <a id="headUploadVideoButton">
+              <i class="material-icons">videocam</i>
+            </a>
+            <span class="tooltip"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sidebar">
+      <ul class="nav-list">
+        <li>
+          <a href="index.html?page=home" name="home">
+            <i class="material-icons">home</i>
+            <label class="material-text">Home</label>
+          </a>
+        </li>
+        <li>
+          <a href="index.html?page=favorite" name="favorite">
+            <i class="material-icons">favorite</i>
+            <label class="material-text">Favorite</label>
+          </a>
+        </li>
+        <li>
+          <a href="index.html?page=history" name="history">
+            <i class="material-icons">history</i>
+            <label class="material-text">History</label>
+          </a>
+        </li>
+        <li>
+          <a href="index.html?page=person" name="person">
+            <i class="material-icons">person</i>
+            <label class="material-text">Profile</label>
+          </a>
+        </li>
+        <li>
+          <a href="index.html?page=settings" name="settings">
+            <i class="material-icons">settings</i>
+            <label class="material-text">Settings</label>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <main class="main" id="home">
+      <div class="content" id="homeContent"></div>
+    </main>
+    <main class="main" id="favorite">
+      <div class="content" id="favoriteContent"></div>
+    </main>
+    <main class="main" id="history">
+      <div class="content" id="historyContent"></div>
+    </main>
+    <main class="main" id="person">
+      <div id="noLogged">
+        <fieldset class="field">
+          <legend>Register</legend>
+          <form>
+            <p>
+              <label class="lab">User name</label>
+              <input id="regUserName" class="input" type="text" />
+            </p>
+            <p>
+              <label class="lab">Email</label>
+              <input id="regEmail" class="input" type="email" />
+            </p>
+            <p>
+              <label class="lab">Password</label>
+              <input id="regPass" class="input" type="password" />
+            </p>
+            <p>
+              <label class="lab">Confirm Password</label>
+              <input id="regRePass" class="input" type="password" />
+            </p>
+          </form>
+          <button id="regButtom" class="formButton">Register</button>
+        </fieldset>
+        <div class="block"></div>
+        <fieldset class="field field2">
+          <legend>Login</legend>
+          <form>
+            <p>
+              <label class="lab">Email</label>
+              <input id="logEmail" class="input" type="email" />
+            </p>
+            <p>
+              <label class="lab">Password</label>
+              <input id="logPass" class="input" type="password" />
+            </p>
+            <p style="color: red" id="loginState"></p>
+          </form>
+          <button id="logButtom" class="formButton">Login</button>
+        </fieldset>
+      </div>
+      <div id="logged">
+        <label id="userWelcome">Welcome!! Hi&nbsp;&nbsp;</label>
+        <button class="formButton" id="logout">Logout</button>
+      </div>
+    </main>
+    <main class="main" id="settings"></main>
+    <main class="main" id="video">
+      <div class="content">
+        <div class="home-section">
+          <div class="video">
+            <div class="fav">
+              <i id="f" class="material-symbols-rounded"> favorite</i>
+            </div>
+            <div class="download">
+              <i class="material-symbols-outlined"> download </i>
+            </div>
+            <div class="share">
+              <span class="material-symbols-outlined"> send </span>
+            </div>
+
+            <div class="main_video-container">
+              <br />
+              <p id="videoTitle"></p>
+              <br />
+              <video
+                id="videoVideo"
+                width="800"
+                height="450"
+                controls
+                style="border-radius: 10px"
+              ></video>
+              <p style="margin-top: 20px" id="videoVal"></p>
+              <div class="description"></div>
+              <p style="margin-top: 20px" id="videoDes"></p>
+            </div>
+          </div>
+          <div class="comment">
+            <h2>Comment section</h2>
+            <div class="commentField" id="cmt">
+
+            </div>
+            <div style="position: absolute; bottom:5%;">
+              <textarea placeholder="Add your comment." id="yourComment"></textarea>
+              <div class="but">
+                <button id="adComment" class="adComment" >need login</button>
+              </div>
+            </d>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="uploadVideoBack" class="uploadVideoBack">
+      <div id="uploadVideo" class="uploadVideo">
+        <label style="margin-left: 30px; font-size: 20px">Title</label><br />
+        <input type="text" id="uploadVideoTitle" class="inputUpload" /><br />
+        <label style="margin-left: 30px; font-size: 20px">Description</label
+        ><br />
+        <input
+          type="text"
+          id="uploadVideoDescription"
+          class="inputUpload"
+        /><br />
+        <label style="margin-left: 30px; font-size: 20px">Gategory</label><br />
+        <select id="uploadVideoGategory" class="inputUpload inputSelect">
+          <option value="Game">Game</option>
+          <option value="Music">Music</option>
+          <option value="Movie">Movie</option>
+          <option value="Anime">Anime</option>
+          <option value="Sport">Sport</option>
+          <option value="Education">Education</option>
+          <option value="Cook">Cook</option>
+          <option value="Other">Other</option></select
+        ><br />
+        <label style="margin-left: 30px; font-size: 20px">Thumbnail</label
+        ><br />
+        <input
+          type="file"
+          accept="image/*"
+          id="uploadVideoThumbnail"
+          class="inputUpload inputFile"
+          onchange=""
+        />
+        <img id="test" src="" />
+        <canvas
+          id="thumbailCanvas"
+          height="90px"
+          width="160px"
+          style="
+            border: 2px black solid;
+            background-color: white;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            display: none;
+          "
+        ></canvas>
+        <br />
+        <label style="margin-left: 30px; font-size: 20px">Video</label><br />
+        <input
+          type="file"
+          accept="video/*"
+          id="uploadVideoVideo"
+          class="inputUpload inputFile"
+        /><br />
+        <button id="videoUploadBtnCancel" class="formButton uploadButton">
+          Cancel
+        </button>
+        <button id="videoUploadBtnUpload" class="formButton uploadButton">
+          Upload
+        </button>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <link rel="stylesheet" href="../css/video.css" />
+  <title>myVideo</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo left">
+      <a href="./index.html">
+        <img src="../images/Logo.png" width="120px" height="40px" />
+      </a>
+    </div>
+
+    <div class="search center">
+      <form action="">
+        <input type="text" placeholder="Search" />
+        <button><i class="material-icons">search</i></button>
+      </form>
+    </div>
+
+    <div>
+      <ul class="searchNav">
+        <li>
+          <a class="#">
+            <i class="material-icons">notifications_active</i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="material-icons">videocam</i>
+          </a>
+          <span class="tooltip"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <main>
+    <div class="sidebar">
+      <div class="logo-details">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class="material-icons">home</i></a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="material-icons">favorite</i> </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="material-icons">history</i></a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="material-icons">person</i></a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="material-icons">settings</i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="home-section">
+        <div class="video">
+          <div class="fav">
+            <i class="material-symbols-outlined">
+              heart_plus</i>
+          </div>
+          <div class="download">
+            <i class="material-symbols-outlined">
+              download
+            </i>
+          </div>
+          <div class="share">
+            <span class="material-symbols-outlined">
+              send
+            </span>
+          </div>
+
+          <div class="main_video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_1lj6JaDKCA"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="description">
+              <p>
+                Steph Curry & DeMarcus Postgame Interview - Game 2 | Warriors vs Raptos | 2019 NBA Finals
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <h2>Comment section</h2>
+          <form>
+            <textarea placeholder="Add your comment."></textarea>
+            <div class="but">
+              <input type="submit" value="Comment">
+              <button>Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
