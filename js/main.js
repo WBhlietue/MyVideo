@@ -467,9 +467,14 @@ function SetVideo(num) {
     console.log(video.view);
     video.view++;
     console.log(video.view);
+    document.getElementById("d").addEventListener("click", () => {
+      console.log("12");
+      // saveBlob(video.videoURL, num + ".mp4");
+      download(video.videoURL);
+    });
     document.getElementById("videoTitle").innerHTML = video.title;
     document.getElementById("videoDes").innerHTML = video.description;
-    // document.getElementById("videoVideo").setAttribute("src", video.videoURL);
+    document.getElementById("videoVideo").setAttribute("src", video.videoURL);
     document.getElementById("videoVal").innerHTML =
       "Uploader: " +
       video.uploader +
@@ -541,3 +546,24 @@ document.getElementById("adComment").addEventListener("click", () => {
     document.getElementById("cmt").innerHTML = d;
   }
 });
+
+var saveBlob = (function () {
+  var a = document.getElementById("dow");
+  return function (blob, fileName) {
+    var url = blob + ".mp4";
+    console.log(url);
+    // a.href = url;
+    // a.download = fileName;
+    // a.click();
+    // window.URL.revokeObjectURL(url);
+  };
+})();
+
+function download(ur) {
+    const url = ur + ".mp4";
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "image.mp4");
+    document.body.appendChild(link);
+    link.click();
+}
