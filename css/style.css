@@ -1,18 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 @font-face {
   font-family: Ubuntu;
   src: url("../font/UbuntuCondensed-Regular.ttf");
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+li{
+  list-style-type: none;
+}
+
 body {
   font-family: "Ubuntu", "Roboto", sans-serif;
   padding-top: 80px;
   padding-left: 240px;
+  background: hsl(0, 0%, 18.82%);
+  color: white;
 }
 
 .header {
@@ -40,7 +48,7 @@ main {
   margin-top: 100px;
   width: 80px;
   left: 0;
-  background: #000000;
+  background: hsl(0, 0%, 18.82%);
   padding: 6px 14px;
   z-index: 1;
   transition: all 0.5s ease;
@@ -390,6 +398,7 @@ input:focus {
   padding: 0 7px;
   cursor: pointer;
 }
+
 .material-text {
   color: rgb(255, 255, 255);
   font-size: 15px;
@@ -402,6 +411,7 @@ input:focus {
 .sidebar:hover .material-text {
   width: 100px;
 }
+
 .sidebar a:hover .material-text {
   color: #000000;
 }
@@ -435,13 +445,15 @@ input:focus {
 
 .content {
   position: static;
-  background-color: #ffffff;
+  background: hsl(0, 0%, 18.82%);
   width: 100%;
   height: 100%;
   padding: 10px 10px;
 }
 
 .videos {
+
+  background: hsl(0, 0%, 18.82%);
   display: inline-flex;
   padding: 15px;
   flex-direction: row;
@@ -486,7 +498,7 @@ input:focus {
 }
 
 .title h3 {
-  color: rgb(3, 3, 3);
+  color: white;
   line-height: 18px;
   font-size: 14px;
   margin-bottom: 6px;
@@ -538,9 +550,11 @@ ul {
   border-radius: 10px;
   padding: 10px;
 }
+
 .input:focus {
   border: 1px black solid;
 }
+
 .block {
   background-color: black;
   height: 600px;
@@ -551,6 +565,7 @@ ul {
   /* top: auto; */
   border-radius: 10px;
 }
+
 .field {
   font-size: 20px;
   margin-top: 150px;
@@ -558,7 +573,9 @@ ul {
   padding: 10px;
   border-radius: 10px;
   float: left;
+  color: white;
 }
+
 .field2 {
   margin-left: 200px;
   margin-top: 200px;
@@ -597,6 +614,7 @@ ul {
   display: none;
   transition: all 0.5s;
 }
+
 .uploadVideo {
   height: 700px;
   width: 500px;
@@ -627,6 +645,7 @@ ul {
   font-family: "Ubuntu";
   font-size: 20px;
 }
+
 .inputUpload:focus {
   border: 1px black solid;
 }
@@ -634,12 +653,15 @@ ul {
 .inputFile {
   height: 100px;
 }
+
 .inputSelect {
   height: 50px;
 }
+
 #person form {
   display: table;
 }
+
 #person form p {
   display: table-row;
 }
@@ -678,6 +700,7 @@ ul {
   transition: all 0.5s;
   /* margin-left: -70px; */
 }
+
 .material-symbols-outlined:hover {
   /* background-color: hsl(0, 0%, 70.82%); */
 
@@ -685,6 +708,7 @@ ul {
   padding-right: 10px;
   /* color: white; */
 }
+
 /* .material-symbols-outlined:active{
   background-color: #333;
   color: white;
@@ -700,6 +724,7 @@ ul {
   cursor: pointer;
   padding: 10px;
 }
+
 .share {
   display: block;
   position: absolute;
@@ -748,7 +773,9 @@ ul {
   padding: 15px 10px;
   border: 1px grey solid;
   border-radius: 20px;
+  color: white;
 }
+
 .comment h2 {
   text-align: center;
   margin-bottom: 15px;
@@ -780,15 +807,18 @@ textarea {
   font-weight: bold;
   cursor: pointer;
 }
+
 .adComment {
   color: white;
   background-color: #3ea6ff;
   margin-left: 175px;
   margin-right: 10px;
 }
+
 .adComment:hover {
   background-color: #1d1b31;
 }
+
 .adComment:active {
   background-color: #3ea6ff;
 }
@@ -798,6 +828,7 @@ textarea {
   transition: all 0.5s;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 50;
 }
+
 .ac {
   color: red;
   font-size: 30px;
@@ -821,4 +852,84 @@ textarea {
   /* border-radius: 20px; */
   transform: translateX(-50%);
   overflow-y: auto;
+}
+
+.main li {
+  text-decoration: none;
+  list-style: none;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 45px;
+  margin-top: 20px;
+}
+
+.main a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s;
+}
+
+.main a:hover {
+  /* background-color: white; */
+  padding: 10px 10px;
+  /* color: #000000; */
+  /* border-radius: 20px; */
+}
+
+.main a li:hover {
+  font-weight: bold;
+  background-color: white;
+  width: 200px;
+  color: white;
+}
+
+.main li:active {
+  width: 550px;
+  margin-left: 10px;
+  background: hsl(0, 0%, 18.82%);
+}
+
+.main ul {
+  margin-top: 100px;
+  margin-left: 230px;
+  border: hsl(0, 0%, 15.82%);
+  border-color: hsl(0, 2%, 50%);
+  width: 600px;
+  height: 400px;
+  border-style: solid;
+  border-radius: 30px;
+}
+
+.main h2 {
+  background: hsl(0, 0%, 18.82%);
+  height: 40px;
+  width: 80px;
+  padding-left: 10px;
+  margin-top: -10px;
+  margin-left: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.dropdownz {
+  position: relative;
+  display: block;
+  float: top;
+}
+
+.dropdown-contentz {
+  display: none;
+  position: absolute;
+  background: hsl(0, 0%, 50%);
+  border-radius: 20px;
+  width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin-left: 400px;
+  margin-top: -40px;
+  z-index: 1;
+}
+
+.dropdownz:hover .dropdown-contentz {
+  display: block;
+  padding: 10px;
 }
